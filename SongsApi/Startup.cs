@@ -32,7 +32,7 @@ namespace SongsApi
 
             services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder =>
             {
-                builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
+                builder.WithOrigins("http://localhost:3000" , "http://localhost:3001").AllowAnyMethod().AllowAnyHeader();
             }));
 
             services.AddMvc();

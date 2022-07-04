@@ -48,10 +48,8 @@ namespace SongsApi.Controllers
             if (rezultat != null)
             {
                 rezultat.SongName = (songPod.SongName != null) ? songPod.SongName : rezultat.SongName;
-               
                 rezultat.Author = (songPod.Author != null) ? songPod.Author : rezultat.Author;
                 rezultat.Rate = (songPod.Rate != null) ? songPod.Rate : rezultat.Rate;
-                rezultat.CreatedAt = (songPod.CreatedAt != null) ? songPod.CreatedAt : rezultat.CreatedAt;
                 rezultat.ModifiedAt = (songPod.ModifiedAt != null) ? songPod.ModifiedAt : rezultat.ModifiedAt;
                 rezultat.Link = (songPod.Link != null) ? songPod.Link : rezultat.Link;
               
