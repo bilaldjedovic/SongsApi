@@ -58,7 +58,7 @@ namespace SongsApi.Controllers
             }
             else
             {
-                return NotFound($"Pjesma sa id {songPod.SongId} nije pronadjena");
+                return NotFound($"Song with id  {songPod.SongId}  not found");
             }
 
             return Ok(rezultat);
@@ -70,7 +70,7 @@ namespace SongsApi.Controllers
             Song song = db.Songs.Where(a => a.SongId == id).FirstOrDefault();
             if (song == null)
             {
-                return NotFound($"Podatak sa ID = {id} nije pronadjen");
+                return NotFound($"Song with id  {id}not found");
             }
             else
             {
@@ -78,10 +78,10 @@ namespace SongsApi.Controllers
                 db.Remove(song);
                 db.SaveChanges();
                 }catch {
-                    return BadRequest("brisanje nije moguće");
+                    return BadRequest("Can't delete");
                 }
             }
-            return Ok("Obrisano");
+            return Ok("Deleted");
         }
 
     }

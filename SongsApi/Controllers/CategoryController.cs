@@ -35,7 +35,7 @@ namespace SongsApi.Controllers
             Category category = db.Categories.Where(a => a.CategoryId == id).FirstOrDefault();
             if (category == null)
             {
-                return NotFound($"Podatak sa ID = {id} nije pronadjen");
+                return NotFound($"Category with id {id} not found");
             }
             else
             {
@@ -67,7 +67,7 @@ namespace SongsApi.Controllers
             }
             else
             {
-                return NotFound($"Pjesma sa id {cat.CategoryId} nije pronadjena");
+                return NotFound($"Category with id {cat.CategoryId} not found");
             }
 
             return Ok(rezultat);
